@@ -1,0 +1,88 @@
+/*
+Reset
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    padding: 1.25rem;
+    background-color: burlywood;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    flex-grow: 1;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.board {
+    height: 37.5rem;
+    width: 37.5rem;
+    background-color: bisque;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.cell {
+    outline: 1px solid black;
+    background-color: lightgreen;
+    width: calc(100% / var(--larghezza), 10);
+    height: calc(100% / var(--larghezza), 10); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell-10 {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.cell-9 {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.cell-7 {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
+.cell-bomb {
+    background-color: red;
+}
+
+.cell-safe {
+    background-color: blue;
+}
+
+h2 {
+    margin: 1.875rem;
+}
+
+.bomb-debug::before {
+    content: 'b';
+}
+/* 
+.cell:nth-child(32){
+    background-color: lime;
+} */
